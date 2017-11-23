@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import url("fonts.css");
-@import url("normalize.css");
+@import url("./normalize.css");
+@import url("./fonts.css");
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -81,7 +81,7 @@ a:hover, a:focus {
 /* 레이아웃 설계 */
 
 .container {
-  background: url("images/bg_flower.png") no-repeat 50% 0, linear-gradient(to bottom, #aaa 0%, #ccc 30%, #fff 70%, #fff 100%);
+  background: url("images/bg_flower.png") no-repeat 50% 0, linear-gradient(to bottom, #aaa 0%, #ccc 50%, #fff 100%);
 }
 .header, .visual, .main-content, .slogan, .footer {
   width: 940px;
@@ -279,15 +279,6 @@ a:hover, a:focus {
 .group3 {
   width: 190px;
   float: left;
-}
-
-/* 메인콘텐츠 공통 */
-
-[class$="more"]::before {
-  content: '\e802';
-  font-family: "fontello";
-  color: hsla(90, 90%, 30%, 1);
-  margin-right: 5px;
 }
 
 /* 로그인 */
@@ -504,279 +495,30 @@ a:hover, a:focus {
 .notice-list time, .pds-list time {
   float: right;
 }
-.notice-list, .pds-list, .notice-more, .pds-more {
-  display: none;
-}
-.notice-more {
+.notice-more, .pds-more {
   position: absolute;
   top: -8px;
   right: -8px;
   padding: 8px;
 }
-.board-act ul, .board-act>a {
-  display: block;
-}
-
-/* 새소식 */
-
-.news {
-  margin-top: 20px;
-  position: relative;
-}
-.news::before {
-  content: "";
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 80%;
-  height: 1px;
-  background: #aaa linear-gradient(to right, #aaa, #fff);
-}
-.news-heading {
-  font-family: "Noto Sans Bold", sans-serif;
-  font-size: 15px;
-  color: #ed802d;
-}
-.news-heading+a {
-  display: block;
-}
-.news-heading+a:hover, .news-heading+.a11y:focus {
-  color: inherit;
-}
-.news-item {
-  margin-top: 30px;
-  padding-left: 130px;
-  min-height: 115px;
-  position: relative;
-}
-.news-item h3 {
-  font-weight: 700;
-}
-.news-item time {
-  display: block;
-  margin: 5px 0 10px;
-}
-.news-item figure {
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-}
-.news-item img {
-  margin-bottom: 15px;
-  box-shadow: 0 15px 15px 2px #aaa;
-}
-
-/* 그리드 이용한 포지션방법 */
-
-
-/* .news-item {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  grid-template-rows: 20px 20px 1fr;
-  grid-template-areas: "thumbnail    headline" "thumbnail    time" "thumbnail    brief";
-}
-.news-item h3 {
-  background-color: lime;
-  grid-area: headline;
-  grid-column: 2;
-  grid-row: 1;
-}
-.news-item time {
-  background-color: orange;
-  grid-area: time;
-  grid-column: 2;
-  grid-row: 2;
-}
-.news-item p {
-  background-color: skyblue;
-  grid-area: brief;
-  grid-column: 2;
-  grid-row: 3;
-}
-.news-item figure {
-  background-color: pink;
-  grid-area: thumbnail;
-  grid-row-start: 1;
-} */
-
-.news-more {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  padding: 8px;
-}
-
-/* 신규이벤트 */
-
-.event-related {
-  background: #ccc linear-gradient(to bottom, #eee, #ccc);
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  padding: 10px;
-}
-.event {
-  border-bottom: 1px solid #aaa;
-  position: relative;
-}
-.event-heading, .related-heading, .favorite-heading {
-  font-family: "Noto Sans Bold", sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-.event-heading span, .related-heading span, .favorite-heading span {
-  color: orange;
-}
-.btn-event p {
-  line-height: 1.5;
-}
-.event-detail img {
-  box-shadow: 5px 5px 0 0 #aaa;
-}
-.btn-event {
-  position: absolute;
-  top: 3px;
-  right: 0;
-}
-.btn-event button {
-  width: 19px;
-  height: 18px;
-  padding-top: 18px;
-  overflow: hidden;
-  background-color: #fff;
-  background-image: url("images/back_forward.png");
-  background-repeat: no-repeat;
-  float: right;
-}
-.btn-event-next {
-  margin-left: 5px;
-  background-position: 100% 0;
-}
-
-/* 관련사이트 */
-
-.related {
-  margin-top: 10px;
-}
-.related-list {
-  background: #fff;
-  height: 25px;
-  overflow: hidden;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  transition: all 0.5s;
-}
-.related-list:hover, .list-open {
-  height: 145px;
-  padding: 12px 0;
-}
-.related-list li {
-  padding: 0 5px;
-}
-.related-list a {
-  display: block;
-  line-height: 23px;
-  padding-left: 2em;
-}
-
-/* 인기사이트 */
-
-.favorite {
-  background: #ccc linear-gradient(to bottom, #eee, #ccc);
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  padding: 10px;
-  margin-top: 20px;
-  position: relative;
-}
-.favorite-list {
-  overflow: hidden;
-}
-.favorite-list li {
-  counter-increment: number;
-  margin-top: 5px;
-  position: relative;
-}
-.favorite-list li::before {
-  content: counter(number, decimal);
-  color: #fff;
-  background: #666;
-  border-radius: 3px;
-  padding: 0 5px;
-  font-size: 1.2rem;
-  margin-right: 5px;
-}
-.favorite-list em {
-  position: absolute;
-  background-image: url("images/rank.png");
-  background-repeat: no-repeat;
-  overflow: hidden;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 9px;
-  height: 11px;
-  padding-top: 10px;
-}
-.up {
-  background-position: 100% 0%;
-}
-.down {
-  background-position: 100% 100%;
-}
-.stop {
-  background-position: 0 50%
-}
-.favorite-more::before {
+.notice-more::before, .pds-more::before {
   content: '\e802';
   font-family: "fontello";
   color: hsla(90, 90%, 30%, 1);
   margin-right: 5px;
 }
-.favorite-more {
-  position: absolute;
-  top: 3px;
-  right: 7px;
-  padding: 8px;
+.notice-list, .pds-list, .notice-more, .pds-more {
+  display: none;
+}
+.board-act ul, .board-act>a {
+  display: block;
 }
 
 /* 슬로건 */
 
 .slogan {
-  padding: 15px 70px 15px 180px;
-  position: relative;
-}
-.slogan-heading {
-  position: absolute;
-  width: 110px;
-  height: 83px;
-  padding: 30px;
-  bottom: -25px;
-  left: 35px;
-}
-.slogan-heading::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("images/coffee.png") no-repeat;
-}
-.slogan-content {
-  background-color: #a09874;
-}
-.slogan-content q {
-  font-weight: bold;
-}
-.slogan-content q::before {
-  font-size: 3rem;
-  position: relative;
-  top: 10px;
-}
-.slogan-content q::after {
-  content: "";
+  background-color: orange;
+  padding: 15px 0;
 }
 
 /* 푸터 */

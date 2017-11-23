@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery.js"></script>
   <script src="js/menu-tab.js"></script>
+
 </head>
 
 <body>
@@ -217,26 +218,43 @@
               <p><img src="images/free_gift.gif" alt="이벤트 경품 : 웹표준 핵심 가이드북 2 도서 증정"></p>
               <p><em>웹표준 핵심 가이드북 2 출시!</em> 선착순 500명 한정으로 증정</p>
             </div>
-            <div class="btn-event">
-              <button type="button" class="btn-event-prev">이전 이벤트 보기</button>
-              <button type="button" class="btn-event-next">다음 이벤트 보기</button>
+            <div class="btn-event clearfix">
+              <button class="btn-event-prev" type="button">이전 이벤트 보기</button>
+              <button class="btn-event-next" type="button">다음 이벤트 보기</button>
             </div>
           </div>
           <div class="related">
             <h2 class="related-heading">관련 <span>사이트</span></h2>
-            <ul class="related-list">
-              <li><a href="#">패스트캠퍼스</a></li>
+            <ul tabindex="0" class="related-list">
+              <li><a href="#">멀티 캠퍼스</a></li>
               <li><a href="#">W3C</a></li>
-              <li><a href="#">웹접근성 연구소</a></li>
-              <li><a href="#">css zengarden</a></li>
+              <li><a href="#">패스트 캠퍼스</a></li>
+              <li><a href="#">KPC</a></li>
               <li><a href="http://cafe.naver.com/webcafe2010">네이버카페</a></li>
             </ul>
           </div>
         </div>
+        <div class="favorite">
+          <h2 class="favorite-heading" id="favorite-heading">인기 <span>사이트</span></h2>
+          <ol class="favorite-list">
+            <li class="no1">w3c<em class="up">상승</em></li>
+            <li class="no2">CSS Zen Garden<em class="down">하락</em></li>
+            <li class="no3">Web standards<em class="stop">멈춤</em></li>
+            <li class="no4">Naver Cafe<em class="up">상승</em></li>
+          </ol>
+          <a href="#" class="favorite-more" aria-labelledby="favorite-heading">더보기</a>
+        </div>
       </div>
     </main>
     <article class="slogan">
-      <h2 class="slogan-heading">슬로건</h2>
+      <h2 class="slogan-heading" title="웹카페에서 웹표준을">슬로건</h2>
+      <p class="slogan-content">
+        <q cite="http://w3.org/WAI/">
+              The power of the Web is in its universality, Access by everyone regardless of disability is an essential aspect. 
+            </q> Tim Berners - Lee , W3C Director and inventor of the World Wide Web + </p>
+
+      <footer class="readable-hidden">
+        출처 : World Wide Web - http://w3.org/WAI/ + </footer>
     </article>
     <div class="footer-bg">
       <footer class="footer">푸터</footer>

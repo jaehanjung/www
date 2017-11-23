@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>board</title>
+  <link rel="stylesheet" href="css/ha.css">
+
+</head>
+
+<body>
+
+  <div class="board">
+    <div class="tab-container" aria-label="공지사항 및 자료실 탭">
+      <ul class="tab-list" role="tablist">
+        <li class="tab" id="tab1" role="tab" aria-controls="notice" aria-selected="true" tabindex="0">공지사항</li>
+        <li class="tab" id="tab2" role="tab" aria-controls="pds" aria-selected="false" tabindex="0">자료실</li>
+      </ul>
+    </div>
+    <div class="notice" id="notice">
+      <h2 id="section1" role="tabpanel" aria-labelledby="tab1">
+        <ul class="notice-list">
+          <li>
+            <a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
+            <time datetime="2017-11-21T14:49:21">2017.11.21</time>
+          </li>
+          <li>
+            <a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
+            <time datetime="2017-11-21T14:49:21">2017.11.21</time>
+          </li>
+          <li>
+            <a href="#">KWCAG 2.1 소식</a>
+            <time datetime="2017-11-21T14:49:21">2017.11.21</time>
+          </li>
+          <li>
+            <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+            <time datetime="2017-11-21T14:49:21">2017.11.21</time>
+          </li>
+          <li>
+            <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+            <time datetime="2017-11-21T14:49:21">2017.11.21</time>
+          </li>
+          <a href="#" class="notice-more" aria-labelledby="notice-heading">더보기</a>
+        </ul>
+      </h2>
+    </div>
+  </div>
+  <div class="pds">
+    <ul class="pds" id="pds" role="tablist">
+    </ul>
+    <h2 id="section2" class="unvisual" role="tabpanel" aria-labelledby="tab2">
+      <li>
+        <a href="#">디자인 사이트 링크 모음</a>
+        <time datetime="2017-11-21T14:49:21">2017.11.21</time>
+      </li>
+      <li>
+        <a href="#">웹 접근성 관련 자료 모음</a>
+        <time datetime="2017-11-21T14:49:21">2017.11.21</time>
+      </li>
+      <li>
+        <a href="#">예제 샘플 응용해보기</a>
+        <time datetime="2017-11-21T14:49:21">2017.11.21</time>
+      </li>
+      <li>
+        <a href="#">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
+        <time datetime="2017-11-21T14:49:21">2017.11.21</time>
+      </li>
+      <li>
+        <a href="#">로얄티 프리 이미지 자료</a>
+        <time datetime="2017-11-21T14:49:21">2017.11.21</time>
+      </li>
+      </ul>
+      <a href="#" class="pds-more" aria-labelledby="pds-heading">더보기</a>
+    </h2>
+  </div>
+  </div>
+  </div>
+
+</body>
+
+</html>
