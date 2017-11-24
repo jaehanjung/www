@@ -37,7 +37,7 @@ body {
 
 /* 링크 스타일 */
 
-a:link, a:visited {
+a {
   color: inherit;
   text-decoration: none;
 }
@@ -748,10 +748,10 @@ a:hover, a:focus {
   position: relative;
 }
 .slogan-heading {
-  position: absolute;
   width: 110px;
   height: 83px;
   padding: 30px;
+  position: absolute;
   bottom: -25px;
   left: 35px;
 }
@@ -765,10 +765,11 @@ a:hover, a:focus {
   background: url("images/coffee.png") no-repeat;
 }
 .slogan-content {
-  background-color: #a09874;
+  color: #a09874;
 }
 .slogan-content q {
   font-weight: bold;
+  /* quotes: "<<" ">>"; */
 }
 .slogan-content q::before {
   font-size: 3rem;
@@ -782,9 +783,37 @@ a:hover, a:focus {
 /* 푸터 */
 
 .footer-bg {
-  background-color: purple;
+  background: #ccc linear-gradient(to bottom, #aaa 0%, #ccc 30%, #eee 60%, #fff 70%, #fff 100%);
 }
 .footer {
-  background-color: skyblue;
-  padding: 15px 0;
+  position: relative;
+  padding: 15px 140px 15px 180px;
+}
+.footer-logo {
+  position: absolute;
+  top: 45px;
+  left: 35px;
+}
+.tech-log {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+}
+.guide {
+  background: #7b8385;
+  color: #fff;
+  border-radius: 20px;
+  padding: 2px 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.guide a {
+  padding: 5px 10px;
+  display: block;
+  text-transform: uppercase;
+}
+address {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
 }
