@@ -83,6 +83,7 @@ a:hover, a:focus {
 .container {
   width: 960px;
   margin: 0 auto;
+  border: 1px solid #aaa;
   background-color: #ffffff;
 }
 
